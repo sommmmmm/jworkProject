@@ -6,7 +6,6 @@ import java.util.HashMap;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.apache.ibatis.reflection.SystemMetaObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
@@ -18,13 +17,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.google.gson.Gson;
 import com.mj.jwork.alarm.controller.EchoHandler;
-import com.mj.jwork.alarm.model.service.AlarmServiceImpl;
+import com.mj.jwork.alarm.model.service.AlarmService;
 import com.mj.jwork.alarm.model.vo.Alarm;
 import com.mj.jwork.common.model.vo.PageInfo;
 import com.mj.jwork.common.template.Pagination;
 import com.mj.jwork.common.template.SendAlarm;
 import com.mj.jwork.employee.model.vo.Employee;
-import com.mj.jwork.ess.model.service.EssServiceImpl;
+import com.mj.jwork.ess.model.service.EssService;
 import com.mj.jwork.ess.model.vo.Annual;
 import com.mj.jwork.ess.model.vo.Attendence;
 import com.mj.jwork.ess.model.vo.Businesstrip;
@@ -37,10 +36,10 @@ import com.mj.jwork.ess.model.vo.Worktime;
 public class EssController {
 
 	@Autowired
-	private EssServiceImpl eService;
+	private EssService eService;
 	
 	@Autowired
-	private AlarmServiceImpl aService;
+	private AlarmService aService;
 	
 	@Autowired
 	private EchoHandler ec;

@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
-import com.mj.jwork.alarm.model.service.AlarmServiceImpl;
+import com.mj.jwork.alarm.model.service.AlarmService;
 import com.mj.jwork.alarm.model.vo.Alarm;
 
 @Controller
 public class AlarmController {
 	
 	@Autowired
-	private AlarmServiceImpl aService;
+	private AlarmService aService;
 	
 	@ResponseBody
 	@RequestMapping(value="list.alarm", produces="application/json; charset=UTF-8")

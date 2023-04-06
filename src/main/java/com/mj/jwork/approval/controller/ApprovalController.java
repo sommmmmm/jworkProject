@@ -18,7 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.google.gson.Gson;
 import com.mj.jwork.alarm.controller.EchoHandler;
-import com.mj.jwork.alarm.model.service.AlarmServiceImpl;
+import com.mj.jwork.alarm.model.service.AlarmService;
 import com.mj.jwork.alarm.model.vo.Alarm;
 import com.mj.jwork.approval.model.service.ApprovalService;
 import com.mj.jwork.approval.model.vo.AppLine;
@@ -38,7 +38,7 @@ public class ApprovalController {
 	private ApprovalService aService;
 	
 	@Autowired
-	private AlarmServiceImpl alarmService;
+	private AlarmService alarmService;
 	
 	@Autowired
 	private EchoHandler ec;

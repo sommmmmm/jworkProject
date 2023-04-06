@@ -18,14 +18,14 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.google.gson.Gson;
 import com.mj.jwork.alarm.controller.EchoHandler;
-import com.mj.jwork.alarm.model.service.AlarmServiceImpl;
+import com.mj.jwork.alarm.model.service.AlarmService;
 import com.mj.jwork.alarm.model.vo.Alarm;
 import com.mj.jwork.common.model.vo.PageInfo;
 import com.mj.jwork.common.template.FileUpload;
 import com.mj.jwork.common.template.Pagination;
 import com.mj.jwork.common.template.SendAlarm;
 import com.mj.jwork.employee.model.vo.Employee;
-import com.mj.jwork.mail.model.service.MailServiceImpl;
+import com.mj.jwork.mail.model.service.MailService;
 import com.mj.jwork.mail.model.vo.Mail;
 import com.mj.jwork.mail.model.vo.MailAt;
 
@@ -33,10 +33,10 @@ import com.mj.jwork.mail.model.vo.MailAt;
 public class MailController {
 	
 	@Autowired
-	private MailServiceImpl mService;
+	private MailService mService;
 	
 	@Autowired
-	private AlarmServiceImpl aService;
+	private AlarmService aService;
 	
 	@Autowired
 	private EchoHandler ec;
